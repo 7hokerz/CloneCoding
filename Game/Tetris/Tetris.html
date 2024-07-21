@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="tetris.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <div class="wrapper-container">
+        <span class="tetris-container">
+            <canvas id="stage" width="250px" height="500px" style="background-color: black;">
+            </canvas>
+            <span class="tetris-panel-container">
+                <p>Next:</p>
+                <canvas id="next" width="150px" height="150px" style="background-color: black;">
+
+                </canvas>
+            <p>LINES:<span id="lines">0</span></p>
+            <p><span id="message"></span></p>
+
+            <div class="tetris-panel-container-padding"></div>
+
+            <table class="tetris-button-panel">
+                <tr>
+                    <td></td>
+                    <td id="rotate-button" class="tetris-button">↻</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="left-button" class="tetris-button">←</td>
+                    <td id="fall-button" class="tetris-button">↓</td>
+                    <td id="right-button" class="tetris-button">→</td>
+                </tr>
+            </table>
+            <table class="progress-button-panel">
+                <tr>
+                    <td></td><!-- start button -->
+                    <td id="start-button" class="tetris-button">Start</td>
+                    <td></td>
+                </tr>
+            </table>
+            </span>
+        </span>
+    </div>
+    <script>
+        let tetris = new Tetris();
+    </script>
+</body>
+</html>
+<!--
+div: 특정 영역이나 구획 설정(블록 레벨 요소. CSS, JS와 함께 사용 가능)
+span: 인라인 요소들을 하나로 묶을 때 사용(JS로 특정 요소 조작 시 사용)
++ 블록 레벨 요소: 항상 새로운 줄에서 시작, 요소의 앞과 뒤에는 줄바꿈이 추가되어 있음. 수직적으로 쌓임.
++ 인라인 요소: 동일한 줄에서 시작되고 끝남, 다른 인라인 요소 및 텍스트와 수평적으로 쌓임.
+
+canvas: 그래픽 그리기 공간 제공.
+
+
+
+-->
